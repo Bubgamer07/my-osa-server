@@ -45,6 +45,23 @@ module.exports = {
 
             properties: { // This overrides settings in the config.js file, providing the selected gamemode doesn't also override it.
                 bot_cap: 16,
+            }
+        },
+        {
+            share_client_server: false, // Only one server at a time can have this enabled.
+            // The above is required if your VM (the machine that hosts the website stuff) doesn't support multi-ports and forces everything through the main server.
+            // This also overrides the below HOST and PORT settings to be identical to the main server's HOST/PORT (by default, 3000).
+
+            host: "localhost:3002", // Server host location.
+            port: 3003, // The port on the server.
+            id: "loe", // (<HOST>/#<SERVER_ID>)
+            featured: false,
+
+            region: "local", // The region the server is on.
+            gamemode: ["devtest"], // The selected gamemode.
+            player_cap: 80, // Not including bots.
+
+            properties: { // This overrides settings in the config.js file, providing the selected gamemode doesn't also override it.
                 daily_tank: {
                     tank: "whirlwind",
                     tier: 3,

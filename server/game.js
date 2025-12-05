@@ -37,6 +37,7 @@ const getName = (name, gamemodeData) => {
         assault_eye: "Assault Eye",
         assault_yinyang: "Assault Yin Yang",
         assault_acropolis: "Assault Acropolis",
+        devtest: "Developer Test",
     };
     return nameMap[name]; 
 }
