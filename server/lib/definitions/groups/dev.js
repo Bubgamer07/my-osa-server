@@ -580,6 +580,8 @@ Class.menu_testing.UPGRADES_TIER_0 = [
     "airblast",
     "angleseer",
     "backwardsexports",
+    "diepflankguardtest",
+    "diepflankguardtest2",
 ]
 
 // airblast testing
@@ -1302,6 +1304,110 @@ exports.backwardsexports = {
     LABEL: "Basic `Exports` exported tank",
     BODY: Class.basic.BODY,
     GUNS: Class.basic.GUNS,
+}
+Class.diepflankguardtest = {
+    PARENT: "genericTank",
+    LABEL: "Diep Flank Guard",
+    DANGER: 4,
+    BODY: {
+        ACCELERATION: base.ACCEL * 1,
+        SPEED: base.SPEED * 1,
+        HEALTH: base.HEALTH * 1,
+        DAMAGE: base.DAMAGE * 1,
+        PENETRATION: base.PENETRATION * 1,
+        SHIELD: base.SHIELD * 1,
+        REGEN: base.REGEN * 1,
+        FOV: base.FOV * 1,
+        DENSITY: base.DENSITY * 1,
+        PUSHABILITY: 1,
+        HETERO: 3
+    },
+    GUNS: [
+        {
+            POSITION: {
+                LENGTH: 18,
+                WIDTH: 8,
+                ASPECT: 1,
+                X: 0,
+                Y: 0,
+                ANGLE: 0,
+                DELAY: 0
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",
+                COLOR: 16,
+                LABEL: "",
+                STAT_CALCULATOR: 0,
+                WAIT_TO_CYCLE: false,
+                AUTOFIRE: false,
+                SYNCS_SKILLS: false,
+                MAX_CHILDREN: 0,
+                ALT_FIRE: false,
+                NEGATIVE_RECOIL: false
+            }
+        },
+        {
+            POSITION: {
+                LENGTH: 14,
+                WIDTH: 8,
+                ASPECT: 1,
+                X: 0,
+                Y: 0,
+                ANGLE: 180,
+                DELAY: 0
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",
+                COLOR: 16,
+                LABEL: "",
+                STAT_CALCULATOR: 0,
+                WAIT_TO_CYCLE: false,
+                AUTOFIRE: false,
+                SYNCS_SKILLS: false,
+                MAX_CHILDREN: 0,
+                ALT_FIRE: false,
+                NEGATIVE_RECOIL: false
+            }
+        }
+    ],
+}
+Class.diepflankguardtest2 = {
+    PARENT: "genericTank",
+    LABEL: "DFG2",
+    GUNS: [
+        {
+            POSITION: {
+                LENGTH: 18,
+                WIDTH: 8,
+                ASPECT: 1,
+                X: 0,
+                Y: 0,
+                ANGLE: 0,
+                DELAY: 0
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: {
+                LENGTH: 14,
+                WIDTH: 8,
+                ASPECT: 1,
+                X: 0,
+                Y: 0,
+                ANGLE: 180,
+                DELAY: 0
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet"
+            }
+        }
+    ],
 }
 let testLayeredBoss = new LayeredBoss("testLayeredBoss", "Test Layered Boss", "terrestrial", 7, 3, "terrestrialTrapTurret", 5, 7, true, {SPEED: 10});
 testLayeredBoss.addLayer({gun: {

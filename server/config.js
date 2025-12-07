@@ -52,7 +52,7 @@ module.exports = {
             // The above is required if your VM (the machine that hosts the website stuff) doesn't support multi-ports and forces everything through the main server.
             // This also overrides the below HOST and PORT settings to be identical to the main server's HOST/PORT (by default, 3000).
 
-            host: "localhost:3002", // Server host location.
+            host: "localhost:3003", // Server host location.
             port: 3003, // The port on the server.
             id: "loe", // (<HOST>/#<SERVER_ID>)
             featured: false,
@@ -62,6 +62,7 @@ module.exports = {
             player_cap: 80, // Not including bots.
 
             properties: { // This overrides settings in the config.js file, providing the selected gamemode doesn't also override it.
+                bot_cap: 0,
                 daily_tank: {
                     tank: "whirlwind",
                     tier: 3,
@@ -132,7 +133,7 @@ module.exports = {
     tier_multiplier: 15, // Level difference between each tier.
 
     // Bots
-    bot_cap: 0, // Maximum number of bots that can be on the server. Set to 0 to disable bots.
+    bot_cap: 1, // Maximum number of bots that can be on the server. Set to 0 to disable bots.
     bot_xp_gain: 60, // How much XP bots get until they reach level_cap.
     bot_start_level: 45, // How much XP bots will receive when first created.
     bot_skill_upgrade_chances: [1, 1, 3, 4, 4, 4, 4, 2, 1, 1], // The chances of a bot upgrading a specific skill when skill upgrades are available.
