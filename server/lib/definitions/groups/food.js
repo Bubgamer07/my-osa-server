@@ -323,6 +323,25 @@ Class.icosahedron = {
     GIVE_KILL_MESSAGE: true,
 };
 
+Class.eeg = {
+    PARENT: "food",
+    LABEL: "eeg",
+    VALUE: 1e100,
+    SHAPE: 0,
+    SIZE: 4.5,
+    COLOR: "black",
+    BODY: {
+        DAMAGE: 0,
+        DENSITY: 2,
+        HEALTH: 0.5 * basePolygonHealth,
+        PENETRATION: 1,
+        PUSHABILITY: 0,
+        ACCELERATION: 0.015
+    },
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+
 // PRESENTS
 Class.presentSymbol = {
     SHAPE: [[0.3, -0.3],[1,-0.3],[1,0.3],[0.3,0.3],[0.3,1],[-0.3,1],[-0.3,0.3],[-1,0.3],[-1,-0.3],[-0.3,-0.3],[-0.3,-1],[0.3,-1]],

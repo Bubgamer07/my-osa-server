@@ -157,10 +157,16 @@ module.exports = {
         [1/1000000, [
             [1296, "jewel"], [216, "legendaryTriangle"], [36, "legendarySquare"], [6, "legendaryPentagon"], [1, "legendaryHexagon"]
         ]]
+        [1/1000000000000, [
+            [1, "eeg"]
+        ]]
     ],
     food_types_nest: [ // Possible food types in the nest
         [1, [
             [16, "pentagon"], [ 4, "betaPentagon"], [ 1, "alphaPentagon"]
+        ]]
+        [1/1000000000, [
+            [1, "eeg"]
         ]]
     ],
     enemy_types_nest: [ // Possible enemy food types in the nest

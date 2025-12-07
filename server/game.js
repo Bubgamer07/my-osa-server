@@ -201,6 +201,7 @@ class gameServer {
 
         // If no errors has accoured then annouce that the game server has succssfully booted up.
         console.log("Game server " + this.name + " successfully booted up. Listening on port", this.port);
+        console.log(Config.bot_cap);
 
         // Send the info to the main server so the client can get the info.
         this.parentPort.postMessage([false, this.getInfo()]);
